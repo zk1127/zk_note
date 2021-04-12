@@ -12,8 +12,8 @@ public void swap(int[] nums, int i ,int j){
 public void bubbleSort(int[] nums){
     for(int i = 0;i < nums.length;i++){
         for(int j = 0;j < nums.length - i - 1;j++){
-            if(nums[j] < nums[i]){
-				swap(nums,i,j);
+            if(nums[j + 1] < nums[j]){
+				swap(nums,j + 1,j);
             }
         }
     }
@@ -40,7 +40,7 @@ public void selectSort(int[] nums){
 public void insertSort(int[] nums){
     for(int i = 1;i < nums.length;i++){
         for(int j = i;j >= 0;j--){
-            if(nums[j] > nums[j - 1]) swap(nums, j, j - 1);
+            if(nums[j] < nums[j - 1]) swap(nums, j, j - 1);
         }
     }
 }
