@@ -78,7 +78,7 @@ public void merge(int[] nums,int[] copy,int l, int m, int r){
 
 ```java
 public void quickSort(int[] nums,int start,int end){
-    while(start < end){
+    if(start < end){
 	    int q = partitation(nums,start,end);
         quickSort(nums,start,q - 1);
         quickSort(nums,q + 1, end);
