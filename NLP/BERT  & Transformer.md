@@ -16,5 +16,5 @@
 
 比如机器翻译任务中，从中文“我喜欢打篮球 ”$\rightarrow$ "I like playing basketball"
 
-query 是“I”， key 是“我,喜欢,打,篮球”  value 就是"I like playing basketball"，通过key捕捉到一些比较关键的字词来保证翻译的性能
+query 是“I”， key 是“我,喜欢,打,篮球”  value 就是这些词的隐含层向量 ，通过key捕捉到一些比较关键的字词来保证翻译的性能
 

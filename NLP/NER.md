@@ -14,7 +14,7 @@
   - MEMM改变了HMM发射的方向，同时破坏了观测独立性，但是他存在label bias problem
   - CRF 在状态转移中是无向图，具有全局归一性
 
-  ![img](/home/BasicData/zk/工作/zk_note/img/crf1.png)
+  ![img](../img/crf1.png)
 
 ##### 在命名实体识别中如何起作用
 
