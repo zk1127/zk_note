@@ -55,7 +55,7 @@ public void mergeSort(int[] nums){
     mergeSort(nums,copy,l,r);
 }
 public void mergeSort(int[] nums,int[] copy,int l,int r){
-    while(l < r){
+    if(l < r){
         int m = l + (r - l) / 2;
         mergeSort(nums,copy,l,m);
         mergeSort(nums,copy,m+1,r);
