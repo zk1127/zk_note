@@ -1,5 +1,23 @@
 ### BERT & Transformer
 
+#### 关于BERT微调
+
+- ```python
+  from ray import tune
+  from ray.tune import track
+  ```
+
+- ```python
+  search_space = {
+          "batch": tune.grid_search([8,16]),
+          "lr": tune.grid_search([1e-5,2e-5,3e-5,4e-5]),
+          "lr_type": tune.grid_search(['constant','linear','cosine']),
+          'maxlength':tune.grid_search([128,256])
+      }
+  ```
+
+  
+
 ### Transformer
 
 - Transformer的两个显著优势
