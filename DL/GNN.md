@@ -203,7 +203,7 @@ $$
   - $f_r(h,t)=r^Ttanh(h^TS_rt+M_r^1h+M_r^2h+b)$
   - 建模两个匹配关系:线性和双线性
   - 参数过多,不适用于大型知识图谱
-- ConvE模型
+- **ConvE模型**
   - $f_r(h,t)=\sigma(vec(\sigma([M_h,M_r]*w))W)t$
   - 容易训练,已经被应用到大规模知识图谱中
 
