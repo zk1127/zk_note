@@ -85,6 +85,9 @@
 - 上文的两个模型本质是Pointwise训练方式,能够学习到很好的全局相关性,但是忽略了不同样本间的偏序关系
 - Pairwise 输入的是一个三元组, 同一个query下选择一个正例和一个负例组合成三元组作为输入样本,进行fine-tuning
 - ![img](https://p1.meituan.net/travelcube/1aabd116bab390b493bdfdddb1fa7306168547.png)
+- 损失函数
+  - $S_{ij}$表示样本对的真实标记,当$Doc_i$比$Doc_j$更相关,$S_{ij}$为1,否则为-1, 而$s_i$和$s_j$表示$Doc_i$和$Doc_j$的模型打分 
+  - $$C=\sum_{(i,j)\in N}1/2(1-S_{ij})\sigma(s_i-s_j)+log(1+e^{-\sigma(s_i-s_j)})$$
 
 ##### 联合训练
 
