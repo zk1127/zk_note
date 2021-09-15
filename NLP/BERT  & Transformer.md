@@ -16,6 +16,28 @@
       }
   ```
 
+#### Pytorch 的自注意力机制
+
+- ```python
+  import torch
+  import torch.nn.functional as F
+  
+  def self_attention(q, k, v, mask=None, dropout=None):
+      d_k = q.size(-1) # 向量维度
+      
+      scores = torch.matmul(q, k.transpose(-2,-1)) / math.sqrt(d_k) # k需要转置,这里是点积注意力
+      
+      if mask is not None:# mask
+          score = score.masked_fill(mask == 0, -1e9)
+      
+      p_attn = F.softmax(scores, dim = -1)
+      
+      if dropout is not None:
+          p_attn = dropout(p_attn)
+      
+      return p_attn, torch.matmul(p_attn, scores)
+  ```
+
   
 
 ### Transformer
